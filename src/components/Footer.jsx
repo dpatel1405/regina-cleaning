@@ -49,19 +49,19 @@ function Footer() {
               Company
             </h4>
             <div className="flex flex-col gap-3">
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/about" className="text-gray-400 text-sm hover:text-green-400">
                 About Us
               </a>
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/contact" className="text-gray-400 text-sm hover:text-green-400">
                 Contact
               </a>
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/quote" className="text-gray-400 text-sm hover:text-green-400">
                 Get a Quote
               </a>
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/booking" className="text-gray-400 text-sm hover:text-green-400">
                 Book Online
               </a>
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/faq" className="text-gray-400 text-sm hover:text-green-400">
                 FAQ
               </a>
             </div>
