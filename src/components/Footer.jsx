@@ -28,16 +28,16 @@ function Footer() {
               Services
             </h4>
             <div className="flex flex-col gap-3">
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 Residential Cleaning
               </a>
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 Deep Cleaning
               </a>
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 Move-In / Move-Out
               </a>
-              <a href="#" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 Office Cleaning
               </a>
             </div>
@@ -77,10 +77,10 @@ function Footer() {
             © 2025 Regina Elite Cleaning Co. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-500 text-sm hover:text-green-400">
+            <a href="/privacy" className="text-gray-500 text-sm hover:text-green-400">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-500 text-sm hover:text-green-400">
+            <a href="/terms" className="text-gray-500 text-sm hover:text-green-400">
               Terms of Service
             </a>
           </div>
