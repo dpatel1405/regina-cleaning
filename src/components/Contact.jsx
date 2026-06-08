@@ -2,24 +2,35 @@ import { useState } from 'react';
 
 function Contact() {
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    address: '',
-    service: '',
-    date: '',
-  });
-
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xeewgjwn', {
+        method: 'POST',
+        body: data,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert('Something went wrong. Please try again or call us directly.');
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again or call us directly.');
+    }
+
+    setLoading(false);
   }
 
   return (
@@ -39,7 +50,7 @@ function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
           {/* Left Side - Contact Info */}
           <div>
@@ -141,8 +152,6 @@ function Contact() {
                   <input
                     type="text"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     placeholder="Jane Smith"
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-green-600 bg-white"
@@ -157,8 +166,6 @@ function Contact() {
                   <input
                     type="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     placeholder="jane@email.com"
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-green-600 bg-white"
@@ -173,8 +180,6 @@ function Contact() {
                   <input
                     type="tel"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     placeholder="(306) 555-0000"
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-green-600 bg-white"
@@ -189,8 +194,6 @@ function Contact() {
                   <input
                     type="text"
                     name="address"
-                    value={formData.address}
-                    onChange={handleChange}
                     placeholder="123 Main St, Regina, SK"
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-green-600 bg-white"
@@ -204,8 +207,6 @@ function Contact() {
                   </label>
                   <select
                     name="service"
-                    value={formData.service}
-                    onChange={handleChange}
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-green-600 bg-white"
                   >
@@ -225,8 +226,6 @@ function Contact() {
                   <input
                     type="date"
                     name="date"
-                    value={formData.date}
-                    onChange={handleChange}
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-green-600 bg-white"
                   />
@@ -235,9 +234,10 @@ function Contact() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-4 rounded-xl text-sm transition-all"
+                  disabled={loading}
+                  className="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-4 rounded-xl text-sm transition-all disabled:opacity-60"
                 >
-                  Request Free Quote
+                  {loading ? 'Sending...' : 'Request Free Quote'}
                 </button>
 
               </form>
