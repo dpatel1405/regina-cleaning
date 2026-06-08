@@ -5,6 +5,7 @@ import Testimonials from '../components/Testimonials';
 import QuoteCalculator from '../components/QuoteCalculator';
 import FAQ from '../components/FAQ';
 import ServiceArea from '../components/ServiceArea';
+import Gallery from '../components/Gallery';
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Hero />
       <WhyChooseUs />
       <Services />
+      <Gallery />
       <Testimonials />
       <QuoteCalculator />
       <ServiceArea />
