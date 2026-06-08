@@ -17,7 +17,7 @@ function WhyChooseUs() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           <div className="bg-white rounded-xl p-8 border border-gray-100">
             <div className="text-4xl mb-4">🔒</div>

@@ -4,10 +4,10 @@ function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
           {/* Column 1 - Brand */}
-          <div className="col-span-2">
+          <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
               <span className="text-green-400 font-bold text-2xl">Regina Elite</span>
               <span className="text-gray-400 text-sm ml-2">Cleaning Co.</span>
@@ -49,19 +49,19 @@ function Footer() {
               Company
             </h4>
             <div className="flex flex-col gap-3">
-              <a href="/about" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 About Us
               </a>
-              <a href="/contact" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 Contact
               </a>
-              <a href="/quote" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 Get a Quote
               </a>
-              <a href="/booking" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 Book Online
               </a>
-              <a href="/faq" className="text-gray-400 text-sm hover:text-green-400">
+              <a href="/" className="text-gray-400 text-sm hover:text-green-400">
                 FAQ
               </a>
             </div>
@@ -72,15 +72,15 @@ function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center gap-4 md:gap-0 md:justify-between">
           <p className="text-gray-500 text-sm">
             © 2025 Regina Elite Cleaning Co. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="/privacy" className="text-gray-500 text-sm hover:text-green-400">
+            <a href="/" className="text-gray-500 text-sm hover:text-green-400">
               Privacy Policy
             </a>
-            <a href="/terms" className="text-gray-500 text-sm hover:text-green-400">
+            <a href="/" className="text-gray-500 text-sm hover:text-green-400">
               Terms of Service
             </a>
           </div>

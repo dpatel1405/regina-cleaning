@@ -17,7 +17,7 @@ function Testimonials() {
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Review 1 */}
           <div className="bg-white rounded-xl p-8 border border-gray-100">
@@ -98,7 +98,7 @@ function Testimonials() {
         </div>
 
         {/* Bottom Trust Bar */}
-        <div className="mt-14 bg-green-700 rounded-xl px-10 py-8 flex items-center justify-between">
+        <div className="mt-14 bg-green-700 rounded-xl px-6 py-8 flex flex-col md:flex-row items-center gap-6 md:gap-0 md:justify-between">
           <div className="text-white">
             <div className="text-2xl font-bold mb-1">4.9 out of 5 stars</div>
             <div className="text-green-200 text-sm">Based on 200+ verified reviews</div>

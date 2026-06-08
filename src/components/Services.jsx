@@ -17,7 +17,7 @@ function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Card 1 */}
           <div className="border border-gray-200 rounded-xl p-8 hover:border-green-600 hover:shadow-md transition-all">
